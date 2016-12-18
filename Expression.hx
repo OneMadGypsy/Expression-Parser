@@ -358,7 +358,11 @@ class Expression
 			result = regex.constant.matched(0);
 			final = Reflect.getProperty(Math, result.toUpperCase());
 			
-		} else final = Std.parseFloat(expr);		//must be a number
+		} else {
+			if (expr == "random")
+				final = Math.random();
+			else final = Std.parseFloat(expr);		//must be a number
+		}
 	
 		//apply negative
 		if(final > -1)
