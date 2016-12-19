@@ -64,7 +64,7 @@ class Expression
 	
 	//regex container
 	private static var regex:Expr_t = 
-	{	white		:new EReg(WHITESPACE, "g"),
+	{	white		:new EReg(WHITESPACE	, "g"),
 		parens		:new EReg(PARENS	, "g"),
 		constant	:new EReg(CONSTANT	, "i"),
 		funcs		:new EReg(FUNCTION	, "i"),
